@@ -27,6 +27,18 @@ public class FloatArraysTest {
     return true;
   }
 
+ @Test
+    public void sayilar() {
+        int x = 5;
+        int y = 7;
+        int z = 9;
+        int k = 2;
+        int l = 4;
+        int m = 6;
+       Assert.assertFalse(y > z);
+    }
+
+
   @Test
   public void testSum() {
     float[] da = {1, 2, 0, -1, -3};
