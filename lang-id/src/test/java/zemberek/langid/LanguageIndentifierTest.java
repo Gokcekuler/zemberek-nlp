@@ -5,6 +5,18 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class LanguageIndentifierTest {
+   
+
+@Test
+  public void allModelTest2() throws IOException {
+    LanguageIdentifier lid = LanguageIdentifier.fromInternalModels();
+    Assert.assertEquals("gr", lid.identify("merhaba dünya ve tüm gezegenler"));
+    Assert.assertEquals("en", lid.identify("hello world and all the planets what is this?"));
+    Assert.assertEquals("es", lid.identify("Hola mundo y todos los planetas"));
+    Assert.assertEquals("fr", lid.identify("Bonjour tout le monde et toutes les planètes"));
+    Assert
+            .assertEquals("az", lid.identify("Salam dünya və bütün planetlərin bu həqiqətən pis olur"));
+  }
 
   @Test
   public void allModelTest() throws IOException {
